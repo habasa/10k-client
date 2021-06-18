@@ -16,7 +16,7 @@ const SignUp = (props) => {
         } else if(password !== passwordCheck) {
             return alert('비밀번호 재확인 부탁드립니다.')
         }
-        axios.post("http://theone10k.kro.kr/signup", {
+        axios.post("http://localhost:4000/signup", {
             email: email,
             name: name,
             password: password
