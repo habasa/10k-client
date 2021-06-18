@@ -1,0 +1,19 @@
+.input_button_form {
+    font-size: x-large;
+    text-align: center;
+    margin: 15px;
+    background-color: rgb(255, 255, 255);
+  transition: background-color .3s;
+}
+
+.input_button_form:hover {
+    background-color: gold;
+}
+
+.inputform {
+    margin: 3em;
+    height: 8em;
+    width: 400px;
+    resize: none;
+    border: 3px solid pink;
+}

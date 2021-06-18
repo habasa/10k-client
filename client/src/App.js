@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import { Route, Redirect } from "react-router-dom"
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn'
+import Goal from './components/Goal'
+import MyPage from './components/MyPage'
+import Timer from './components/Timer';
+
 
 function App() {
+  const [login, setLogin] = useState(false)
+  // const [token, setToken] = useState('')
+
+  // useEffect(() => {
+  //   console.log('gg');
+  // })
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route path='/signin'
+        render={() => (
+          <SignIn setLogin={setLogin} />
+        )} />
+      <Route path='/signup'
+        render={() => (
+          <SignUp />
+        )} />
+
+      <Route path='/user' render={() => <MyPage login={login} setLogin={setLogin} />} />
+      <Route path='/mypage/goal' render={() => <Goal />} />
+      <Route path='/timer' render={() => <Timer />} />
+
+      <Route
+        path='/'
+        render={() => {
+          if (document.cookie.includes('true')) {
+            return <Redirect to='/user' />;
+          }
+          return <Redirect to='/signin' />;
+        }}
+      />
     </div>
   );
 }

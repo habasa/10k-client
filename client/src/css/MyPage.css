@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+    text-align: center;
+  }
+
+body, html {
+    background: linear-gradient(#ffecd2, #fcb69f) no-repeat fixed 50% 50%/100% 100%;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+
+.mypage_container {
+    display: grid;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    z-index: 1;
+    grid-template-areas:
+		"header header header"
+		"   a    main    b   "
+		"   .     .      .   "
+		"footer footer footer";
+    
+}
+.mypage_container::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.2;
+    background: url('../Photos/mono.png');
+}
+
+.mypage_div { 
+  grid-area: main;
+  
+}
+
+.button_form {
+    float: right;
+    font-size: x-large;
+    text-align: center;
+    margin: 15px;
+    background-color: rgb(255, 255, 255);
+  transition: background-color .3s;
+}
+
+.img { 
+    grid-area: header;
+    width: 58vh;
+    height: 50vh;
+}
+
+.button_form:hover {
+    background-color: gold;
+}
+
+.mypage_title {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.goals{
+  color:cornflowerblue;
+  text-decoration: none;
+  font: italic 1.5em "Fira Sans", serif;
+}
+
+.goals:hover{
+  color:coral;
+}
+
+.goals:visited{
+  color:rgb(42, 94, 87);
+}
+
+.goal_list {
+  list-style:none;
+}
+
+.loading .dim{
+  position:fixed; 
+  left:0; 
+  top:0; 
+  width:100%; 
+  height:100%; 
+  background:rgba(0,0,0,.7);
+}
+
+.loading .circle {
+  position:fixed; 
+  left:50%; 
+  top:50%; 
+  transform:translate(-50%, -50%); 
+  width:40px; height:40px; 
+  border:10px solid #fff; 
+  border-top:10px solid red; 
+  border-radius:50em;
+  transition: all 1.2s;
+  animation-name:spinCircle;
+  animation-duration: 1.2s;
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spinCircle {
+  from {
+      transform:translate(-50%, -50%) rotate(0);
+  }
+  to {
+      transform:translate(-50%, -50%) rotate(360deg);
+  }
+}
