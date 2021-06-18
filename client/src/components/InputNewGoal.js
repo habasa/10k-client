@@ -71,7 +71,7 @@ function InputNewGoal(props) {
             alert("모든 목표 이름, 목표 설명, 목표 시간을 모두 설정해주시기 바랍니다.");
         } else {
             axios
-                .post("http://theone10k.kro.kr/goals", {
+                .post("http://localhost:4000/goals", {
                     goalName: newGoalName.value,
                     description: desc,
                     email: props.userInfo.email,

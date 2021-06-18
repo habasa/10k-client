@@ -13,7 +13,7 @@ const SignIn = (props) => {
             return alert('이메일과 비밀번호를 다 기입해주세요')
         }
 
-        await axios.post("http://theone10k.kro.kr/signin", {
+        await axios.post("http://localhost:4000/signin", {
             email: email,
             password: password
         }, {withCredentials: true

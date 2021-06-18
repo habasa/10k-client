@@ -17,7 +17,7 @@ function ChangeDescription(props) {
         } else {
             if (window.confirm("목표를 수정하시겠습니까?")) {
                 axios
-                    .put("http://theone10k.kro.kr/goals", {
+                    .put("http://localhost:4000/goals", {
                         goalName: props.goalName,
                         description: descM
                     },
