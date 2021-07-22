@@ -9,7 +9,7 @@ const Timer = (props) => {
     // math함수써서 시분초로 나타내기
 
     const saveTime = () => {
-        axios.post("http://theone10k.kro.kr/goals/time", {
+        axios.post("http://localhost:4000/goals/time", {
             goalName: props.goalName,
             time: String(time)
         }, {

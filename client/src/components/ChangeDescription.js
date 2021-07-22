@@ -12,12 +12,12 @@ function ChangeDescription(props) {
     }
 
     const handleDescChangeClick = () => {
-        if (descM.length === 0) {
+        if (document.getElementById('goalTextBox').value === '') {
             alert('변경할 내용을 입력하세요!!!')
         } else {
             if (window.confirm("목표를 수정하시겠습니까?")) {
                 axios
-                    .put("http://theone10k.kro.kr/goals", {
+                    .put("http://localhost:4000/goals", {
                         goalName: props.goalName,
                         description: descM
                     },
