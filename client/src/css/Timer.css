@@ -1,0 +1,30 @@
+.timer_div {
+    background-color: rgb(233, 152, 152);
+}
+
+.timer_button {
+    font-size: x-large;
+    text-align: center;
+    margin: 3px;
+    background-color: rgb(255, 255, 255);
+  transition: background-color .3s;
+}
+
+.timer_button:hover {
+    background-color: gold;
+  }
+
+  .timerfont {
+      font-size: 4rem;
+  }
+
+.timer_title {
+    font-size: 1.5rem;
+}
+
+.timer_title_rate {
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
