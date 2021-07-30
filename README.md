@@ -17,4 +17,4 @@ React, node.js, mysql, sequelize, AWS(배포실패ㅠ)
 # Wiki
 For more information 
 
-[Diealmond wiki page](https://github.com/codestates/10k-server/wiki)
+[10K wiki page](https://github.com/codestates/10k-server/wiki)
